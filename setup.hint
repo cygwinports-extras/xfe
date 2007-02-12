@@ -1,7 +1,10 @@
 category: Utils X11 Graphics
-requires: cygwin fox12 libintl3
+requires: cygwin fox16 libintl8
 sdesc: "X File Explorer suite for FOX Toolkit"
-ldesc: "X File Explorer (Xfe) is an MS-Explorer like file manager, built
-on the FOX Toolkit. It is based on the popular, but discontinued, X Win
-Commander.  Also included are a text viewer (xfv), image viewer (xfi)
-and a RPM manager (xfq)."
+ldesc: "X File Explorer is an MS-Explorer like file manager, built on 
+the FOX Toolkit. It is based on the popular, but discontinued, X Win 
+Commander.  Also included are:
+* xfi: image viewer
+* xfq: RPM manager
+* xfv: text viewer
+* xfw: text editor"
