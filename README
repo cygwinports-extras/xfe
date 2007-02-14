@@ -36,35 +36,34 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xfe-0.98-X-src.tar.bz2
+  unpack xfe-0.98.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xfe-0.98-X.cygport all
+  cygport ./xfe-0.98.1-X.cygport all
 
 This will create:
-  /usr/src/xfe-0.98-X-src.tar.bz2
-  /usr/src/xfe-0.98-X.tar.bz2
+  /usr/src/xfe-0.98.1-X-src.tar.bz2
+  /usr/src/xfe-0.98.1-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
-  /etc/xfe/xferc
   /usr/bin/xfe.exe
   /usr/bin/xfi.exe
   /usr/bin/xfq.exe
   /usr/bin/xfv.exe
   /usr/bin/xfw.exe
-  /usr/share/doc/Cygwin/xfe-0.98.README
-  /usr/share/doc/xfe-0.98/ABOUT-NLS
-  /usr/share/doc/xfe-0.98/AUTHORS
-  /usr/share/doc/xfe-0.98/BUGS
-  /usr/share/doc/xfe-0.98/COPYING
-  /usr/share/doc/xfe-0.98/ChangeLog
-  /usr/share/doc/xfe-0.98/INSTALL
-  /usr/share/doc/xfe-0.98/README
-  /usr/share/doc/xfe-0.98/TODO
+  /usr/share/doc/Cygwin/xfe-0.98.1.README
+  /usr/share/doc/xfe-0.98.1/ABOUT-NLS
+  /usr/share/doc/xfe-0.98.1/AUTHORS
+  /usr/share/doc/xfe-0.98.1/BUGS
+  /usr/share/doc/xfe-0.98.1/COPYING
+  /usr/share/doc/xfe-0.98.1/ChangeLog
+  /usr/share/doc/xfe-0.98.1/INSTALL
+  /usr/share/doc/xfe-0.98.1/README
+  /usr/share/doc/xfe-0.98.1/TODO
   /usr/share/locale/ca/LC_MESSAGES/xfe.mo
   /usr/share/locale/cs/LC_MESSAGES/xfe.mo
   /usr/share/locale/da/LC_MESSAGES/xfe.mo
@@ -1244,12 +1243,13 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfe-theme/zoomin.png
   /usr/share/xfe/icons/xfe-theme/zoomout.png
   /usr/share/xfe/icons/xfe-theme/zoomwin.png
+  /usr/share/xfe/xferc
 
 ------------------
 
 Port Notes:
 
------ version 0.98-1 -----
+----- version 0.98.1-1 -----
 Version bump for FOX-1.6.
 
 ----- version 0.88-1 -----
