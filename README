@@ -19,7 +19,7 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.9-1
+  cygport-0.2.10-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -36,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xfe-0.98.1-X-src.tar.bz2
+  unpack xfe-0.98.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xfe-0.98.1-X.cygport all
+  cygport ./xfe-0.98.2-X.cygport all
 
 This will create:
-  /usr/src/xfe-0.98.1-X-src.tar.bz2
-  /usr/src/xfe-0.98.1-X.tar.bz2
+  /usr/src/xfe-0.98.2-X-src.tar.bz2
+  /usr/src/xfe-0.98.2-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,15 +55,15 @@ Files included in the binary package:
   /usr/bin/xfq.exe
   /usr/bin/xfv.exe
   /usr/bin/xfw.exe
-  /usr/share/doc/Cygwin/xfe-0.98.1.README
-  /usr/share/doc/xfe-0.98.1/ABOUT-NLS
-  /usr/share/doc/xfe-0.98.1/AUTHORS
-  /usr/share/doc/xfe-0.98.1/BUGS
-  /usr/share/doc/xfe-0.98.1/COPYING
-  /usr/share/doc/xfe-0.98.1/ChangeLog
-  /usr/share/doc/xfe-0.98.1/INSTALL
-  /usr/share/doc/xfe-0.98.1/README
-  /usr/share/doc/xfe-0.98.1/TODO
+  /usr/share/doc/Cygwin/xfe-0.98.2.README
+  /usr/share/doc/xfe-0.98.2/ABOUT-NLS
+  /usr/share/doc/xfe-0.98.2/AUTHORS
+  /usr/share/doc/xfe-0.98.2/BUGS
+  /usr/share/doc/xfe-0.98.2/COPYING
+  /usr/share/doc/xfe-0.98.2/ChangeLog
+  /usr/share/doc/xfe-0.98.2/INSTALL
+  /usr/share/doc/xfe-0.98.2/README
+  /usr/share/doc/xfe-0.98.2/TODO
   /usr/share/locale/ca/LC_MESSAGES/xfe.mo
   /usr/share/locale/cs/LC_MESSAGES/xfe.mo
   /usr/share/locale/da/LC_MESSAGES/xfe.mo
@@ -661,6 +661,293 @@ Files included in the binary package:
   /usr/share/xfe/icons/gnomeblue-theme/zoomin.png
   /usr/share/xfe/icons/gnomeblue-theme/zoomout.png
   /usr/share/xfe/icons/gnomeblue-theme/zoomwin.png
+  /usr/share/xfe/icons/windows-theme/Capture.png
+  /usr/share/xfe/icons/windows-theme/a_16x16.png
+  /usr/share/xfe/icons/windows-theme/a_32x32.png
+  /usr/share/xfe/icons/windows-theme/archadd.png
+  /usr/share/xfe/icons/windows-theme/archext.png
+  /usr/share/xfe/icons/windows-theme/attrib.png
+  /usr/share/xfe/icons/windows-theme/bak_16x16.png
+  /usr/share/xfe/icons/windows-theme/bak_32x32.png
+  /usr/share/xfe/icons/windows-theme/bigapp.png
+  /usr/share/xfe/icons/windows-theme/bigblockdev.png
+  /usr/share/xfe/icons/windows-theme/bigbrokenlink.png
+  /usr/share/xfe/icons/windows-theme/bigcdrom.png
+  /usr/share/xfe/icons/windows-theme/bigchardev.png
+  /usr/share/xfe/icons/windows-theme/bigdoc.png
+  /usr/share/xfe/icons/windows-theme/bigexec.png
+  /usr/share/xfe/icons/windows-theme/bigfloppy.png
+  /usr/share/xfe/icons/windows-theme/bigfolder.png
+  /usr/share/xfe/icons/windows-theme/bigfolderlocked.png
+  /usr/share/xfe/icons/windows-theme/bigfolderopen.png
+  /usr/share/xfe/icons/windows-theme/bigfolderup.png
+  /usr/share/xfe/icons/windows-theme/bigharddisk.png
+  /usr/share/xfe/icons/windows-theme/bigicons.png
+  /usr/share/xfe/icons/windows-theme/biglink.png
+  /usr/share/xfe/icons/windows-theme/bignfsdrive.png
+  /usr/share/xfe/icons/windows-theme/bignfsdriveumt.png
+  /usr/share/xfe/icons/windows-theme/bigpipe.png
+  /usr/share/xfe/icons/windows-theme/bigsocket.png
+  /usr/share/xfe/icons/windows-theme/bigzip.png
+  /usr/share/xfe/icons/windows-theme/bigzipdrive.png
+  /usr/share/xfe/icons/windows-theme/bmp_16x16.png
+  /usr/share/xfe/icons/windows-theme/bmp_32x32.png
+  /usr/share/xfe/icons/windows-theme/bug_16x16.png
+  /usr/share/xfe/icons/windows-theme/bug_32x32.png
+  /usr/share/xfe/icons/windows-theme/bz2_16x16.png
+  /usr/share/xfe/icons/windows-theme/bz2_32x32.png
+  /usr/share/xfe/icons/windows-theme/c_16x16.png
+  /usr/share/xfe/icons/windows-theme/c_32x32.png
+  /usr/share/xfe/icons/windows-theme/cc_16x16.png
+  /usr/share/xfe/icons/windows-theme/cc_32x32.png
+  /usr/share/xfe/icons/windows-theme/cdrom.png
+  /usr/share/xfe/icons/windows-theme/class_16x16.png
+  /usr/share/xfe/icons/windows-theme/class_32x32.png
+  /usr/share/xfe/icons/windows-theme/closefile.png
+  /usr/share/xfe/icons/windows-theme/clrbook.png
+  /usr/share/xfe/icons/windows-theme/colltree.png
+  /usr/share/xfe/icons/windows-theme/config_16x16.png
+  /usr/share/xfe/icons/windows-theme/config_32x32.png
+  /usr/share/xfe/icons/windows-theme/copy_big.png
+  /usr/share/xfe/icons/windows-theme/copy_clp.png
+  /usr/share/xfe/icons/windows-theme/core_16x16.png
+  /usr/share/xfe/icons/windows-theme/core_32x32.png
+  /usr/share/xfe/icons/windows-theme/cut_clp.png
+  /usr/share/xfe/icons/windows-theme/deb_16x16.png
+  /usr/share/xfe/icons/windows-theme/deb_32x32.png
+  /usr/share/xfe/icons/windows-theme/delete_big.png
+  /usr/share/xfe/icons/windows-theme/delete_big_perm.png
+  /usr/share/xfe/icons/windows-theme/desel.png
+  /usr/share/xfe/icons/windows-theme/details.png
+  /usr/share/xfe/icons/windows-theme/dia_16x16.png
+  /usr/share/xfe/icons/windows-theme/dia_32x32.png
+  /usr/share/xfe/icons/windows-theme/dirback.png
+  /usr/share/xfe/icons/windows-theme/dirforward.png
+  /usr/share/xfe/icons/windows-theme/dirup.png
+  /usr/share/xfe/icons/windows-theme/djvu_16x16.png
+  /usr/share/xfe/icons/windows-theme/djvu_32x32.png
+  /usr/share/xfe/icons/windows-theme/doc_16x16.png
+  /usr/share/xfe/icons/windows-theme/doc_32x32.png
+  /usr/share/xfe/icons/windows-theme/dvi_16x16.png
+  /usr/share/xfe/icons/windows-theme/dvi_32x32.png
+  /usr/share/xfe/icons/windows-theme/edit.png
+  /usr/share/xfe/icons/windows-theme/enter.png
+  /usr/share/xfe/icons/windows-theme/errorbig.png
+  /usr/share/xfe/icons/windows-theme/exe_16x16.png
+  /usr/share/xfe/icons/windows-theme/exe_32x32.png
+  /usr/share/xfe/icons/windows-theme/exptree.png
+  /usr/share/xfe/icons/windows-theme/file_16x16.png
+  /usr/share/xfe/icons/windows-theme/file_32x32.png
+  /usr/share/xfe/icons/windows-theme/filedelete.png
+  /usr/share/xfe/icons/windows-theme/filedelete_perm.png
+  /usr/share/xfe/icons/windows-theme/fileopen.png
+  /usr/share/xfe/icons/windows-theme/filter.png
+  /usr/share/xfe/icons/windows-theme/find_again.png
+  /usr/share/xfe/icons/windows-theme/fliplr.png
+  /usr/share/xfe/icons/windows-theme/flipud.png
+  /usr/share/xfe/icons/windows-theme/floppy.png
+  /usr/share/xfe/icons/windows-theme/fonts.png
+  /usr/share/xfe/icons/windows-theme/gif_16x16.png
+  /usr/share/xfe/icons/windows-theme/gif_32x32.png
+  /usr/share/xfe/icons/windows-theme/gotobig.png
+  /usr/share/xfe/icons/windows-theme/gotoline.png
+  /usr/share/xfe/icons/windows-theme/gz_16x16.png
+  /usr/share/xfe/icons/windows-theme/gz_32x32.png
+  /usr/share/xfe/icons/windows-theme/h_16x16.png
+  /usr/share/xfe/icons/windows-theme/h_32x32.png
+  /usr/share/xfe/icons/windows-theme/harddisk.png
+  /usr/share/xfe/icons/windows-theme/help.png
+  /usr/share/xfe/icons/windows-theme/help_16x16.png
+  /usr/share/xfe/icons/windows-theme/help_32x32.png
+  /usr/share/xfe/icons/windows-theme/hidehidden.png
+  /usr/share/xfe/icons/windows-theme/hidenumbers.png
+  /usr/share/xfe/icons/windows-theme/hidethumb.png
+  /usr/share/xfe/icons/windows-theme/home.png
+  /usr/share/xfe/icons/windows-theme/html_16x16.png
+  /usr/share/xfe/icons/windows-theme/html_32x32.png
+  /usr/share/xfe/icons/windows-theme/info_16x16.png
+  /usr/share/xfe/icons/windows-theme/info_32x32.png
+  /usr/share/xfe/icons/windows-theme/infobig.png
+  /usr/share/xfe/icons/windows-theme/invsel.png
+  /usr/share/xfe/icons/windows-theme/java_16x16.png
+  /usr/share/xfe/icons/windows-theme/java_32x32.png
+  /usr/share/xfe/icons/windows-theme/jpeg_16x16.png
+  /usr/share/xfe/icons/windows-theme/jpeg_32x32.png
+  /usr/share/xfe/icons/windows-theme/link_big.png
+  /usr/share/xfe/icons/windows-theme/location.png
+  /usr/share/xfe/icons/windows-theme/lowercase.png
+  /usr/share/xfe/icons/windows-theme/lzh_16x16.png
+  /usr/share/xfe/icons/windows-theme/lzh_32x32.png
+  /usr/share/xfe/icons/windows-theme/m_16x16.png
+  /usr/share/xfe/icons/windows-theme/m_32x32.png
+  /usr/share/xfe/icons/windows-theme/make_16x16.png
+  /usr/share/xfe/icons/windows-theme/make_32x32.png
+  /usr/share/xfe/icons/windows-theme/maphost.png
+  /usr/share/xfe/icons/windows-theme/midi_16x16.png
+  /usr/share/xfe/icons/windows-theme/midi_32x32.png
+  /usr/share/xfe/icons/windows-theme/miniapp.png
+  /usr/share/xfe/icons/windows-theme/miniblockdev.png
+  /usr/share/xfe/icons/windows-theme/minibrokenlink.png
+  /usr/share/xfe/icons/windows-theme/minichardev.png
+  /usr/share/xfe/icons/windows-theme/minidoc.png
+  /usr/share/xfe/icons/windows-theme/miniexec.png
+  /usr/share/xfe/icons/windows-theme/minifolder.png
+  /usr/share/xfe/icons/windows-theme/minifolderclosed.png
+  /usr/share/xfe/icons/windows-theme/minifolderlocked.png
+  /usr/share/xfe/icons/windows-theme/minifolderopen.png
+  /usr/share/xfe/icons/windows-theme/minifolderup.png
+  /usr/share/xfe/icons/windows-theme/minilink.png
+  /usr/share/xfe/icons/windows-theme/minipipe.png
+  /usr/share/xfe/icons/windows-theme/minishell.png
+  /usr/share/xfe/icons/windows-theme/minisocket.png
+  /usr/share/xfe/icons/windows-theme/minixfe.png
+  /usr/share/xfe/icons/windows-theme/minixferoot.png
+  /usr/share/xfe/icons/windows-theme/move_big.png
+  /usr/share/xfe/icons/windows-theme/moveit.png
+  /usr/share/xfe/icons/windows-theme/mp3_16x16.png
+  /usr/share/xfe/icons/windows-theme/mp3_32x32.png
+  /usr/share/xfe/icons/windows-theme/newfile.png
+  /usr/share/xfe/icons/windows-theme/newfolder.png
+  /usr/share/xfe/icons/windows-theme/news_16x16.png
+  /usr/share/xfe/icons/windows-theme/news_32x32.png
+  /usr/share/xfe/icons/windows-theme/nfsdrive.png
+  /usr/share/xfe/icons/windows-theme/nfsdriveumt.png
+  /usr/share/xfe/icons/windows-theme/o_16x16.png
+  /usr/share/xfe/icons/windows-theme/o_32x32.png
+  /usr/share/xfe/icons/windows-theme/odf_16x16.png
+  /usr/share/xfe/icons/windows-theme/odf_32x32.png
+  /usr/share/xfe/icons/windows-theme/odg_16x16.png
+  /usr/share/xfe/icons/windows-theme/odg_32x32.png
+  /usr/share/xfe/icons/windows-theme/odp_16x16.png
+  /usr/share/xfe/icons/windows-theme/odp_32x32.png
+  /usr/share/xfe/icons/windows-theme/ods_16x16.png
+  /usr/share/xfe/icons/windows-theme/ods_32x32.png
+  /usr/share/xfe/icons/windows-theme/odt_16x16.png
+  /usr/share/xfe/icons/windows-theme/odt_32x32.png
+  /usr/share/xfe/icons/windows-theme/onepanel.png
+  /usr/share/xfe/icons/windows-theme/package.png
+  /usr/share/xfe/icons/windows-theme/package_16x16.png
+  /usr/share/xfe/icons/windows-theme/package_32x32.png
+  /usr/share/xfe/icons/windows-theme/paste_clp.png
+  /usr/share/xfe/icons/windows-theme/pdf_16x16.png
+  /usr/share/xfe/icons/windows-theme/pdf_32x32.png
+  /usr/share/xfe/icons/windows-theme/png_16x16.png
+  /usr/share/xfe/icons/windows-theme/png_32x32.png
+  /usr/share/xfe/icons/windows-theme/ppt_16x16.png
+  /usr/share/xfe/icons/windows-theme/ppt_32x32.png
+  /usr/share/xfe/icons/windows-theme/prefs.png
+  /usr/share/xfe/icons/windows-theme/print.png
+  /usr/share/xfe/icons/windows-theme/printbig.png
+  /usr/share/xfe/icons/windows-theme/ps_16x16.png
+  /usr/share/xfe/icons/windows-theme/ps_32x32.png
+  /usr/share/xfe/icons/windows-theme/questionbig.png
+  /usr/share/xfe/icons/windows-theme/quit.png
+  /usr/share/xfe/icons/windows-theme/rar_16x16.png
+  /usr/share/xfe/icons/windows-theme/rar_32x32.png
+  /usr/share/xfe/icons/windows-theme/redo.png
+  /usr/share/xfe/icons/windows-theme/reload.png
+  /usr/share/xfe/icons/windows-theme/renameit.png
+  /usr/share/xfe/icons/windows-theme/replace.png
+  /usr/share/xfe/icons/windows-theme/revert.png
+  /usr/share/xfe/icons/windows-theme/rotateleft.png
+  /usr/share/xfe/icons/windows-theme/rotateright.png
+  /usr/share/xfe/icons/windows-theme/rpm_16x16.png
+  /usr/share/xfe/icons/windows-theme/rpm_32x32.png
+  /usr/share/xfe/icons/windows-theme/run.png
+  /usr/share/xfe/icons/windows-theme/saveas.png
+  /usr/share/xfe/icons/windows-theme/savefile.png
+  /usr/share/xfe/icons/windows-theme/search.png
+  /usr/share/xfe/icons/windows-theme/searchnext.png
+  /usr/share/xfe/icons/windows-theme/searchprev.png
+  /usr/share/xfe/icons/windows-theme/selall.png
+  /usr/share/xfe/icons/windows-theme/setbook.png
+  /usr/share/xfe/icons/windows-theme/shared_16x16.png
+  /usr/share/xfe/icons/windows-theme/shared_32x32.png
+  /usr/share/xfe/icons/windows-theme/shell.png
+  /usr/share/xfe/icons/windows-theme/shell_16x16.png
+  /usr/share/xfe/icons/windows-theme/shell_32x32.png
+  /usr/share/xfe/icons/windows-theme/showhidden.png
+  /usr/share/xfe/icons/windows-theme/shownumbers.png
+  /usr/share/xfe/icons/windows-theme/showthumb.png
+  /usr/share/xfe/icons/windows-theme/smallicons.png
+  /usr/share/xfe/icons/windows-theme/so_16x16.png
+  /usr/share/xfe/icons/windows-theme/so_32x32.png
+  /usr/share/xfe/icons/windows-theme/sort.png
+  /usr/share/xfe/icons/windows-theme/sound_16x16.png
+  /usr/share/xfe/icons/windows-theme/sound_32x32.png
+  /usr/share/xfe/icons/windows-theme/svg_16x16.png
+  /usr/share/xfe/icons/windows-theme/svg_32x32.png
+  /usr/share/xfe/icons/windows-theme/sxc_16x16.png
+  /usr/share/xfe/icons/windows-theme/sxc_32x32.png
+  /usr/share/xfe/icons/windows-theme/sxd_16x16.png
+  /usr/share/xfe/icons/windows-theme/sxd_32x32.png
+  /usr/share/xfe/icons/windows-theme/sxi_16x16.png
+  /usr/share/xfe/icons/windows-theme/sxi_32x32.png
+  /usr/share/xfe/icons/windows-theme/sxm_16x16.png
+  /usr/share/xfe/icons/windows-theme/sxm_32x32.png
+  /usr/share/xfe/icons/windows-theme/sxw_16x16.png
+  /usr/share/xfe/icons/windows-theme/sxw_32x32.png
+  /usr/share/xfe/icons/windows-theme/tar_16x16.png
+  /usr/share/xfe/icons/windows-theme/tar_32x32.png
+  /usr/share/xfe/icons/windows-theme/tbz2_16x16.png
+  /usr/share/xfe/icons/windows-theme/tbz2_32x32.png
+  /usr/share/xfe/icons/windows-theme/tcl_16x16.png
+  /usr/share/xfe/icons/windows-theme/tcl_32x32.png
+  /usr/share/xfe/icons/windows-theme/tex_16x16.png
+  /usr/share/xfe/icons/windows-theme/tex_32x32.png
+  /usr/share/xfe/icons/windows-theme/text_16x16.png
+  /usr/share/xfe/icons/windows-theme/text_32x32.png
+  /usr/share/xfe/icons/windows-theme/tgz_16x16.png
+  /usr/share/xfe/icons/windows-theme/tgz_32x32.png
+  /usr/share/xfe/icons/windows-theme/tif_16x16.png
+  /usr/share/xfe/icons/windows-theme/tif_32x32.png
+  /usr/share/xfe/icons/windows-theme/totrash.png
+  /usr/share/xfe/icons/windows-theme/trash_full.png
+  /usr/share/xfe/icons/windows-theme/trash_full_big.png
+  /usr/share/xfe/icons/windows-theme/treeonepanel.png
+  /usr/share/xfe/icons/windows-theme/treetwopanels.png
+  /usr/share/xfe/icons/windows-theme/twopanels.png
+  /usr/share/xfe/icons/windows-theme/undo.png
+  /usr/share/xfe/icons/windows-theme/unmaphost.png
+  /usr/share/xfe/icons/windows-theme/uppercase.png
+  /usr/share/xfe/icons/windows-theme/vhdl_16x16.png
+  /usr/share/xfe/icons/windows-theme/vhdl_32x32.png
+  /usr/share/xfe/icons/windows-theme/video_16x16.png
+  /usr/share/xfe/icons/windows-theme/video_32x32.png
+  /usr/share/xfe/icons/windows-theme/view.png
+  /usr/share/xfe/icons/windows-theme/vlog_16x16.png
+  /usr/share/xfe/icons/windows-theme/vlog_32x32.png
+  /usr/share/xfe/icons/windows-theme/vsd_16x16.png
+  /usr/share/xfe/icons/windows-theme/vsd_32x32.png
+  /usr/share/xfe/icons/windows-theme/warningbig.png
+  /usr/share/xfe/icons/windows-theme/wave_16x16.png
+  /usr/share/xfe/icons/windows-theme/wave_32x32.png
+  /usr/share/xfe/icons/windows-theme/work.png
+  /usr/share/xfe/icons/windows-theme/wrapoff.png
+  /usr/share/xfe/icons/windows-theme/wrapon.png
+  /usr/share/xfe/icons/windows-theme/xbm_16x16.png
+  /usr/share/xfe/icons/windows-theme/xbm_32x32.png
+  /usr/share/xfe/icons/windows-theme/xcf_16x16.png
+  /usr/share/xfe/icons/windows-theme/xcf_32x32.png
+  /usr/share/xfe/icons/windows-theme/xfe.png
+  /usr/share/xfe/icons/windows-theme/xfi.png
+  /usr/share/xfe/icons/windows-theme/xfq.png
+  /usr/share/xfe/icons/windows-theme/xfv.png
+  /usr/share/xfe/icons/windows-theme/xfw.png
+  /usr/share/xfe/icons/windows-theme/xfwsmall.png
+  /usr/share/xfe/icons/windows-theme/xls_16x16.png
+  /usr/share/xfe/icons/windows-theme/xls_32x32.png
+  /usr/share/xfe/icons/windows-theme/xpm_16x16.png
+  /usr/share/xfe/icons/windows-theme/xpm_32x32.png
+  /usr/share/xfe/icons/windows-theme/z_16x16.png
+  /usr/share/xfe/icons/windows-theme/z_32x32.png
+  /usr/share/xfe/icons/windows-theme/zip.png
+  /usr/share/xfe/icons/windows-theme/zip_16x16.png
+  /usr/share/xfe/icons/windows-theme/zip_32x32.png
+  /usr/share/xfe/icons/windows-theme/zoom100.png
+  /usr/share/xfe/icons/windows-theme/zoomin.png
+  /usr/share/xfe/icons/windows-theme/zoomout.png
+  /usr/share/xfe/icons/windows-theme/zoomwin.png
   /usr/share/xfe/icons/xfce-theme/a_16x16.png
   /usr/share/xfe/icons/xfce-theme/a_32x32.png
   /usr/share/xfe/icons/xfce-theme/archadd.png
@@ -730,32 +1017,22 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfce-theme/dvi_16x16.png
   /usr/share/xfe/icons/xfce-theme/dvi_32x32.png
   /usr/share/xfe/icons/xfce-theme/edit.png
-  /usr/share/xfe/icons/xfce-theme/empty.png
   /usr/share/xfe/icons/xfce-theme/enter.png
-  /usr/share/xfe/icons/xfce-theme/errorIcon.png
   /usr/share/xfe/icons/xfce-theme/errorbig.png
   /usr/share/xfe/icons/xfce-theme/exe_16x16.png
   /usr/share/xfe/icons/xfce-theme/exe_32x32.png
-  /usr/share/xfe/icons/xfce-theme/exec.png
   /usr/share/xfe/icons/xfce-theme/exptree.png
   /usr/share/xfe/icons/xfce-theme/file_16x16.png
   /usr/share/xfe/icons/xfce-theme/file_32x32.png
-  /usr/share/xfe/icons/xfce-theme/filecopy.png
   /usr/share/xfe/icons/xfce-theme/filedelete.png
   /usr/share/xfe/icons/xfce-theme/filedelete_perm.png
-  /usr/share/xfe/icons/xfce-theme/filedit.png
-  /usr/share/xfe/icons/xfce-theme/fileedit.png
   /usr/share/xfe/icons/xfce-theme/fileopen.png
-  /usr/share/xfe/icons/xfce-theme/fileview.png
   /usr/share/xfe/icons/xfce-theme/filter.png
   /usr/share/xfe/icons/xfce-theme/find_again.png
   /usr/share/xfe/icons/xfce-theme/fliplr.png
   /usr/share/xfe/icons/xfce-theme/flipud.png
   /usr/share/xfe/icons/xfce-theme/floppy.png
   /usr/share/xfe/icons/xfce-theme/folder.png
-  /usr/share/xfe/icons/xfce-theme/folderlocked.png
-  /usr/share/xfe/icons/xfce-theme/folderopen.png
-  /usr/share/xfe/icons/xfce-theme/folderup.png
   /usr/share/xfe/icons/xfce-theme/fonts.png
   /usr/share/xfe/icons/xfce-theme/gif_16x16.png
   /usr/share/xfe/icons/xfce-theme/gif_32x32.png
@@ -775,7 +1052,6 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfce-theme/home.png
   /usr/share/xfe/icons/xfce-theme/html_16x16.png
   /usr/share/xfe/icons/xfce-theme/html_32x32.png
-  /usr/share/xfe/icons/xfce-theme/infoIcon.png
   /usr/share/xfe/icons/xfce-theme/info_16x16.png
   /usr/share/xfe/icons/xfce-theme/info_32x32.png
   /usr/share/xfe/icons/xfce-theme/infobig.png
@@ -796,7 +1072,6 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfce-theme/maphost.png
   /usr/share/xfe/icons/xfce-theme/midi_16x16.png
   /usr/share/xfe/icons/xfce-theme/midi_32x32.png
-  /usr/share/xfe/icons/xfce-theme/mini_stop.png
   /usr/share/xfe/icons/xfce-theme/miniapp.png
   /usr/share/xfe/icons/xfce-theme/miniblockdev.png
   /usr/share/xfe/icons/xfce-theme/minibrokenlink.png
@@ -808,9 +1083,7 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfce-theme/minifolderlocked.png
   /usr/share/xfe/icons/xfce-theme/minifolderopen.png
   /usr/share/xfe/icons/xfce-theme/minifolderup.png
-  /usr/share/xfe/icons/xfce-theme/minihome.png
   /usr/share/xfe/icons/xfce-theme/minilink.png
-  /usr/share/xfe/icons/xfce-theme/minimc.png
   /usr/share/xfe/icons/xfce-theme/minipipe.png
   /usr/share/xfe/icons/xfce-theme/minishell.png
   /usr/share/xfe/icons/xfce-theme/minisocket.png
@@ -842,7 +1115,6 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfce-theme/package.png
   /usr/share/xfe/icons/xfce-theme/package_16x16.png
   /usr/share/xfe/icons/xfce-theme/package_32x32.png
-  /usr/share/xfe/icons/xfce-theme/palette.png
   /usr/share/xfe/icons/xfce-theme/paste_clp.png
   /usr/share/xfe/icons/xfce-theme/pdf_16x16.png
   /usr/share/xfe/icons/xfce-theme/pdf_32x32.png
@@ -916,11 +1188,9 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfce-theme/tgz_32x32.png
   /usr/share/xfe/icons/xfce-theme/tif_16x16.png
   /usr/share/xfe/icons/xfce-theme/tif_32x32.png
-  /usr/share/xfe/icons/xfce-theme/tinyempty.png
   /usr/share/xfe/icons/xfce-theme/totrash.png
   /usr/share/xfe/icons/xfce-theme/trash_full.png
   /usr/share/xfe/icons/xfce-theme/trash_full_big.png
-  /usr/share/xfe/icons/xfce-theme/tree.png
   /usr/share/xfe/icons/xfce-theme/treeonepanel.png
   /usr/share/xfe/icons/xfce-theme/treetwopanels.png
   /usr/share/xfe/icons/xfce-theme/twopanels.png
@@ -936,7 +1206,6 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfce-theme/vlog_32x32.png
   /usr/share/xfe/icons/xfce-theme/vsd_16x16.png
   /usr/share/xfe/icons/xfce-theme/vsd_32x32.png
-  /usr/share/xfe/icons/xfce-theme/warningIcon.png
   /usr/share/xfe/icons/xfce-theme/warningbig.png
   /usr/share/xfe/icons/xfce-theme/wave_16x16.png
   /usr/share/xfe/icons/xfce-theme/wave_32x32.png
@@ -1033,6 +1302,8 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfe-theme/djvu_32x32.png
   /usr/share/xfe/icons/xfe-theme/doc_16x16.png
   /usr/share/xfe/icons/xfe-theme/doc_32x32.png
+  /usr/share/xfe/icons/xfe-theme/dvi_16x16.png
+  /usr/share/xfe/icons/xfe-theme/dvi_32x32.png
   /usr/share/xfe/icons/xfe-theme/edit.png
   /usr/share/xfe/icons/xfe-theme/enter.png
   /usr/share/xfe/icons/xfe-theme/errorbig.png
@@ -1181,6 +1452,16 @@ Files included in the binary package:
   /usr/share/xfe/icons/xfe-theme/sound_32x32.png
   /usr/share/xfe/icons/xfe-theme/svg_16x16.png
   /usr/share/xfe/icons/xfe-theme/svg_32x32.png
+  /usr/share/xfe/icons/xfe-theme/sxc_16x16.png
+  /usr/share/xfe/icons/xfe-theme/sxc_32x32.png
+  /usr/share/xfe/icons/xfe-theme/sxd_16x16.png
+  /usr/share/xfe/icons/xfe-theme/sxd_32x32.png
+  /usr/share/xfe/icons/xfe-theme/sxi_16x16.png
+  /usr/share/xfe/icons/xfe-theme/sxi_32x32.png
+  /usr/share/xfe/icons/xfe-theme/sxm_16x16.png
+  /usr/share/xfe/icons/xfe-theme/sxm_32x32.png
+  /usr/share/xfe/icons/xfe-theme/sxw_16x16.png
+  /usr/share/xfe/icons/xfe-theme/sxw_32x32.png
   /usr/share/xfe/icons/xfe-theme/tar_16x16.png
   /usr/share/xfe/icons/xfe-theme/tar_32x32.png
   /usr/share/xfe/icons/xfe-theme/tbz2_16x16.png
@@ -1248,6 +1529,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.98.2-1 -----
+Version bump.
 
 ----- version 0.98.1-1 -----
 Version bump for FOX-1.6.
