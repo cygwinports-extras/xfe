@@ -19,7 +19,7 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.10-1
+  cygport-0.2.11-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -36,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xfe-0.98.2-X-src.tar.bz2
+  unpack xfe-0.99-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xfe-0.98.2-X.cygport all
+  cygport ./xfe-0.99-X.cygport all
 
 This will create:
-  /usr/src/xfe-0.98.2-X-src.tar.bz2
-  /usr/src/xfe-0.98.2-X.tar.bz2
+  /usr/src/xfe-0.99-X-src.tar.bz2
+  /usr/src/xfe-0.99-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,15 +55,15 @@ Files included in the binary package:
   /usr/bin/xfq.exe
   /usr/bin/xfv.exe
   /usr/bin/xfw.exe
-  /usr/share/doc/Cygwin/xfe-0.98.2.README
-  /usr/share/doc/xfe-0.98.2/ABOUT-NLS
-  /usr/share/doc/xfe-0.98.2/AUTHORS
-  /usr/share/doc/xfe-0.98.2/BUGS
-  /usr/share/doc/xfe-0.98.2/COPYING
-  /usr/share/doc/xfe-0.98.2/ChangeLog
-  /usr/share/doc/xfe-0.98.2/INSTALL
-  /usr/share/doc/xfe-0.98.2/README
-  /usr/share/doc/xfe-0.98.2/TODO
+  /usr/share/doc/Cygwin/xfe-0.99.README
+  /usr/share/doc/xfe-0.99/ABOUT-NLS
+  /usr/share/doc/xfe-0.99/AUTHORS
+  /usr/share/doc/xfe-0.99/BUGS
+  /usr/share/doc/xfe-0.99/COPYING
+  /usr/share/doc/xfe-0.99/ChangeLog
+  /usr/share/doc/xfe-0.99/INSTALL
+  /usr/share/doc/xfe-0.99/README
+  /usr/share/doc/xfe-0.99/TODO
   /usr/share/locale/ca/LC_MESSAGES/xfe.mo
   /usr/share/locale/cs/LC_MESSAGES/xfe.mo
   /usr/share/locale/da/LC_MESSAGES/xfe.mo
@@ -1529,6 +1529,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.99-1 -----
+Version bump.
 
 ----- version 0.98.2-1 -----
 Version bump.
