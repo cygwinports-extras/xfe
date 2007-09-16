@@ -10,8 +10,8 @@ Commander.  Also included are:
 
 Runtime requirements:
   cygwin-1.5.24-2
-  fox16-1.6.28-1
-  libX11_6-1.1.1-1
+  fox16-1.6.29-1
+  libX11_6-1.1.3-1
   libXft2-2.1.12-1
   libintl8-0.15-1
 
@@ -21,12 +21,12 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.11-1
+  cygport-0.3.5-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   make-3.81-1
-  reswrap-1.4.29-1
+  reswrap-1.6.4-1
   sed-4.1.5-2
 
 Canonical homepage:
@@ -38,15 +38,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xfe-1.00-X-src.tar.bz2
+  unpack xfe-1.04-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xfe-1.00-X.cygport all
+  cygport ./xfe-1.04-X.cygport all
 
 This will create:
-  /usr/src/xfe-1.00-X-src.tar.bz2
-  /usr/src/xfe-1.00-X.tar.bz2
+  /usr/src/xfe-1.04-X-src.tar.bz2
+  /usr/src/xfe-1.04-X.tar.bz2
 
 -------------------------------------------
 
@@ -57,15 +57,15 @@ Files included in the binary package:
   /usr/bin/xfp.exe
   /usr/bin/xfv.exe
   /usr/bin/xfw.exe
-  /usr/share/doc/Cygwin/xfe-1.00.README
-  /usr/share/doc/xfe-1.00/ABOUT-NLS
-  /usr/share/doc/xfe-1.00/AUTHORS
-  /usr/share/doc/xfe-1.00/BUGS
-  /usr/share/doc/xfe-1.00/COPYING
-  /usr/share/doc/xfe-1.00/ChangeLog
-  /usr/share/doc/xfe-1.00/INSTALL
-  /usr/share/doc/xfe-1.00/README
-  /usr/share/doc/xfe-1.00/TODO
+  /usr/share/doc/Cygwin/xfe-1.04.README
+  /usr/share/doc/xfe-1.04/ABOUT-NLS
+  /usr/share/doc/xfe-1.04/AUTHORS
+  /usr/share/doc/xfe-1.04/BUGS
+  /usr/share/doc/xfe-1.04/COPYING
+  /usr/share/doc/xfe-1.04/ChangeLog
+  /usr/share/doc/xfe-1.04/INSTALL
+  /usr/share/doc/xfe-1.04/README
+  /usr/share/doc/xfe-1.04/TODO
   /usr/share/locale/ca/LC_MESSAGES/xfe.mo
   /usr/share/locale/cs/LC_MESSAGES/xfe.mo
   /usr/share/locale/da/LC_MESSAGES/xfe.mo
@@ -105,6 +105,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 1.04-1 -----
+Version bump.
 
 ----- version 1.00-1 -----
 Version bump.
