@@ -9,24 +9,23 @@ Commander.  Also included are:
 * xfw: text editor
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  fox16-1.6.29-1
+  cygwin-1.5.25-15
+  fox16-1.6.33-1
   libX11_6-1.1.3-1
   libXft2-2.1.12-1
   libintl8-0.15-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.5-1
-  gawk-3.1.5-4
+  binutils-20080523-1
+  cygport-0.3.11-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   make-3.81-1
-  reswrap-1.6.4-1
+  reswrap-1.6.33-1
   sed-4.1.5-2
 
 Canonical homepage:
@@ -38,15 +37,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xfe-1.04-X-src.tar.bz2
+  unpack xfe-1.19-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xfe-1.04-X.cygport all
+  cygport ./xfe-1.19-X.cygport all
 
 This will create:
-  /usr/src/xfe-1.04-X-src.tar.bz2
-  /usr/src/xfe-1.04-X.tar.bz2
+  /usr/src/xfe-1.19-X-src.tar.bz2
+  /usr/src/xfe-1.19-X.tar.bz2
 
 -------------------------------------------
 
@@ -57,15 +56,14 @@ Files included in the binary package:
   /usr/bin/xfp.exe
   /usr/bin/xfv.exe
   /usr/bin/xfw.exe
-  /usr/share/doc/Cygwin/xfe-1.04.README
-  /usr/share/doc/xfe-1.04/ABOUT-NLS
-  /usr/share/doc/xfe-1.04/AUTHORS
-  /usr/share/doc/xfe-1.04/BUGS
-  /usr/share/doc/xfe-1.04/COPYING
-  /usr/share/doc/xfe-1.04/ChangeLog
-  /usr/share/doc/xfe-1.04/INSTALL
-  /usr/share/doc/xfe-1.04/README
-  /usr/share/doc/xfe-1.04/TODO
+  /usr/share/doc/xfe-1.19/ABOUT-NLS
+  /usr/share/doc/xfe-1.19/AUTHORS
+  /usr/share/doc/xfe-1.19/BUGS
+  /usr/share/doc/xfe-1.19/COPYING
+  /usr/share/doc/xfe-1.19/ChangeLog
+  /usr/share/doc/xfe-1.19/INSTALL
+  /usr/share/doc/xfe-1.19/README
+  /usr/share/doc/xfe-1.19/TODO
   /usr/share/locale/ca/LC_MESSAGES/xfe.mo
   /usr/share/locale/cs/LC_MESSAGES/xfe.mo
   /usr/share/locale/da/LC_MESSAGES/xfe.mo
@@ -75,6 +73,7 @@ Files included in the binary package:
   /usr/share/locale/fr/LC_MESSAGES/xfe.mo
   /usr/share/locale/hu/LC_MESSAGES/xfe.mo
   /usr/share/locale/it/LC_MESSAGES/xfe.mo
+  /usr/share/locale/ja/LC_MESSAGES/xfe.mo
   /usr/share/locale/no/LC_MESSAGES/xfe.mo
   /usr/share/locale/pl/LC_MESSAGES/xfe.mo
   /usr/share/locale/pt_BR/LC_MESSAGES/xfe.mo
@@ -97,6 +96,8 @@ Files included in the binary package:
   /usr/share/xfe/icons/brown-theme/*
   /usr/share/xfe/icons/gnome-theme/*
   /usr/share/xfe/icons/gnomeblue-theme/*
+  /usr/share/xfe/icons/kde-theme/*
+  /usr/share/xfe/icons/tango-theme/*
   /usr/share/xfe/icons/windows-theme/*
   /usr/share/xfe/icons/xfce-theme/*
   /usr/share/xfe/icons/xfe-theme/*
@@ -105,6 +106,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 1.19-1 -----
+Version bump.
 
 ----- version 1.04-1 -----
 Version bump.
