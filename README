@@ -20,7 +20,7 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20080523-1
-  cygport-0.3.11-1
+  cygport-0.3.12-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -37,15 +37,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xfe-1.19-X-src.tar.bz2
+  unpack xfe-1.19.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xfe-1.19-X.cygport all
+  cygport ./xfe-1.19.1-X.cygport all
 
 This will create:
-  /usr/src/xfe-1.19-X-src.tar.bz2
-  /usr/src/xfe-1.19-X.tar.bz2
+  /usr/src/xfe-1.19.1-X-src.tar.bz2
+  /usr/src/xfe-1.19.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -56,14 +56,14 @@ Files included in the binary package:
   /usr/bin/xfp.exe
   /usr/bin/xfv.exe
   /usr/bin/xfw.exe
-  /usr/share/doc/xfe-1.19/ABOUT-NLS
-  /usr/share/doc/xfe-1.19/AUTHORS
-  /usr/share/doc/xfe-1.19/BUGS
-  /usr/share/doc/xfe-1.19/COPYING
-  /usr/share/doc/xfe-1.19/ChangeLog
-  /usr/share/doc/xfe-1.19/INSTALL
-  /usr/share/doc/xfe-1.19/README
-  /usr/share/doc/xfe-1.19/TODO
+  /usr/share/doc/xfe-1.19.1/ABOUT-NLS
+  /usr/share/doc/xfe-1.19.1/AUTHORS
+  /usr/share/doc/xfe-1.19.1/BUGS
+  /usr/share/doc/xfe-1.19.1/COPYING
+  /usr/share/doc/xfe-1.19.1/ChangeLog
+  /usr/share/doc/xfe-1.19.1/INSTALL
+  /usr/share/doc/xfe-1.19.1/README
+  /usr/share/doc/xfe-1.19.1/TODO
   /usr/share/locale/ca/LC_MESSAGES/xfe.mo
   /usr/share/locale/cs/LC_MESSAGES/xfe.mo
   /usr/share/locale/da/LC_MESSAGES/xfe.mo
@@ -106,6 +106,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 1.19.1-1 -----
+Version bump.
 
 ----- version 1.19-1 -----
 Version bump.

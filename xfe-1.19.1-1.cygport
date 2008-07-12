@@ -1,0 +1,15 @@
+DESCRIPTION="X File Explorer"
+HOMEPAGE="http://roland65.free.fr/xfe/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+DIFF_EXCLUDES="Makefile xferc"
+
+export WANT_FOX=1.6
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cd ${B}
+	cygconf --enable-release
+	cygmake LIBS="$(fox-config --libs)"
+}
