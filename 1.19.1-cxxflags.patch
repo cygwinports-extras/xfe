@@ -1,0 +1,12 @@
+--- origsrc/xfe-1.19.1/configure.in	2008-07-03 06:25:30.000000000 -0500
++++ src/xfe-1.19.1/configure.in	2008-07-11 19:02:19.640625000 -0500
+@@ -13,9 +13,6 @@
+ 
+ AC_USE_SYSTEM_EXTENSIONS
+ 
+-dnl Prevents setting compilation flags
+-CXXFLAGS=""
+-
+ dnl Checks for compilers
+ AC_PROG_MAKE_SET
+ AC_PROG_CC

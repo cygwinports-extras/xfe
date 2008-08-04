@@ -1,15 +1,15 @@
 DESCRIPTION="X File Explorer"
 HOMEPAGE="http://roland65.free.fr/xfe/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+PATCH_URI="
+	1.19.1-cxxflags.patch
+	1.19.1-libintl.patch
+	1.19.1-vpath.patch
+"
 
 DIFF_EXCLUDES="Makefile xferc"
 
 export WANT_FOX=1.6
 
-src_compile() {
-	cd ${S}
-	cygautoreconf
-	cd ${B}
-	cygconf --enable-release
-	cygmake LIBS="$(fox-config --libs)"
-}
+CYGCONF_ARGS="--enable-release"
+LIBS="$(fox-config --libs)"

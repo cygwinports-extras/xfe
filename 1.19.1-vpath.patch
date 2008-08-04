@@ -1,0 +1,74 @@
+--- origsrc/xfe-1.19.1/Makefile.am	2008-07-03 06:21:51.000000000 -0500
++++ src/xfe-1.19.1/Makefile.am	2008-07-11 19:02:19.625000000 -0500
+@@ -18,7 +18,7 @@
+ 	cp iconslink.sh $(distdir)
+ 
+ install-data-hook:
+-	sh iconslink.sh $(top_srcdir) $(DESTDIR)$(rcdir)
++	sh $(srcdir)/iconslink.sh $(top_srcdir) $(DESTDIR)$(rcdir)
+ 	
+ uninstall-hook:
+ 	rm -rf $(DESTDIR)$(rcdir)
+--- origsrc/xfe-1.19.1/icons/blue-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/blue-theme/Makefile.am	2008-07-11 19:02:19.656250000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/blue-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/brown-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/brown-theme/Makefile.am	2008-07-11 19:02:19.671875000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/brown-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/gnome-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/gnome-theme/Makefile.am	2008-07-11 19:02:19.687500000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/gnome-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/gnomeblue-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/gnomeblue-theme/Makefile.am	2008-07-11 19:02:19.687500000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/gnomeblue-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/kde-theme/Makefile.am	2008-07-03 06:21:51.000000000 -0500
++++ src/xfe-1.19.1/icons/kde-theme/Makefile.am	2008-07-11 19:02:20.281250000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/kde-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/tango-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/tango-theme/Makefile.am	2008-07-11 19:02:20.281250000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/tango-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/windows-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/windows-theme/Makefile.am	2008-07-11 19:02:20.296875000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/windows-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/xfce-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/xfce-theme/Makefile.am	2008-07-11 19:02:20.312500000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/xfce-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
+--- origsrc/xfe-1.19.1/icons/xfe-theme/Makefile.am	2008-07-03 06:21:50.000000000 -0500
++++ src/xfe-1.19.1/icons/xfe-theme/Makefile.am	2008-07-11 19:02:20.656250000 -0500
+@@ -1,3 +1,3 @@
+ icondir=$(datadir)/xfe/icons/xfe-theme
+-icon_DATA=*.png
++icon_DATA=$(wildcard $(srcdir)/*.png)
+ 	
