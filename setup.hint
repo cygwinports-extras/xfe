@@ -1,5 +1,5 @@
 category: Utils X11 Graphics
-requires: cygwin fox16 libX11_6 libXft2 libintl8
+requires: fox16 libX11_6 libXft2 libintl8
 sdesc: "X File Explorer suite for FOX Toolkit"
 ldesc: "X File Explorer is an MS-Explorer like file manager, built on 
 the FOX Toolkit. It is based on the popular, but discontinued, X Win 
