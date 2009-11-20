@@ -1,0 +1,27 @@
+--- origsrc/xfe-1.32.1/configure.in	2009-10-20 10:43:40.000000000 -0500
++++ src/xfe-1.32.1/configure.in	2009-11-20 12:19:26.626042900 -0600
+@@ -72,10 +72,6 @@ AC_CHECK_FUNCS([endgrent endpwent gethos
+ AC_SYS_LARGEFILE
+ 
+ 
+-# Check for FOX 1.6
+-AC_CHECK_LIB(FOX-1.6,fxfindfox,,AC_MSG_ERROR("libFOX-1.6 not found"))
+-
+-
+ # Check for FOX 1.6 header files
+ AC_HEADER_STDC
+ AC_LANG_CPLUSPLUS
+@@ -93,9 +89,12 @@ fi
+ FOXCFLAGS=`$FOX_CONFIG --cflags`
+ CXXFLAGS="${CXXFLAGS} $FOXCFLAGS"
+ 
++FOXLIBS=`$FOX_CONFIG --libs`
++LIBS="$LIBS $FOXLIBS"
++
+ 
+ # Check if FOX was compiled with xft support
+-TEST_XFT=`$FOX_CONFIG --libs | grep Xft`
++TEST_XFT=`echo $FOXLIBS | grep Xft`
+ if test "x$TEST_XFT" != "x" ; then
+ 	
+ 	echo "checking whether FOX was compiled with Xft support... yes"

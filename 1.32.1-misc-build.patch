@@ -1,0 +1,29 @@
+--- origsrc/xfe-1.32.1/src/foxhacks.cpp	2009-10-16 07:28:32.000000000 -0500
++++ src/xfe-1.32.1/src/foxhacks.cpp	2009-11-18 22:18:24.322386800 -0600
+@@ -1,5 +1,6 @@
+ // This file contains all FOX functions redefinitions (FOX hacks for various purposes)
+ 
++#include <sys/select.h>
+ #include <X11/Xlib.h>
+ 
+ #ifdef HAVE_XFT_H
+--- origsrc/xfe-1.32.1/src/xfeutils.cpp	2009-11-09 10:17:17.000000000 -0600
++++ src/xfe-1.32.1/src/xfeutils.cpp	2009-11-18 22:33:15.773079500 -0600
+@@ -512,7 +512,7 @@ FXbool isUtf8(const FXchar* string, FXui
+ 
+ 
+ // Replacement of the stat function
+-inline FXint statrep(const FXchar* filename, struct stat* buf)
++FXint statrep(const FXchar* filename, struct stat* buf)
+ {
+ #if defined(linux)
+ 
+@@ -546,7 +546,7 @@ inline FXint statrep(const FXchar* filen
+ 
+ 
+ // Replacement of the lstat function
+-inline FXint lstatrep(const FXchar* filename, struct stat* buf)
++FXint lstatrep(const FXchar* filename, struct stat* buf)
+ {
+ #if defined(linux)
+ 
