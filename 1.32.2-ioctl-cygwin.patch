@@ -1,0 +1,11 @@
+--- origsrc/xfe-1.32.2/xvt/ttyinit.c	2010-09-15 09:32:26.000000000 -0500
++++ src/xfe-1.32.2/xvt/ttyinit.c	2011-01-25 03:17:58.359380000 -0600
+@@ -126,7 +126,7 @@
+ #endif /* HPUX */
+ 
+ /* GNU LINUX */
+-#if defined (__linux__)
++#if defined (__linux__) || defined (__CYGWIN__)
+ #include <sys/ioctl.h>
+ #include <pty.h>
+ #define LIBC_OPENPTY
