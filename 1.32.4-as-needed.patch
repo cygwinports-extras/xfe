@@ -1,0 +1,55 @@
+--- origsrc/xfe-1.32.4/configure.ac	2011-04-12 10:34:11.000000000 -0500
++++ src/xfe-1.32.4/configure.ac	2011-11-14 02:22:07.643189900 -0600
+@@ -19,8 +19,8 @@ if test "$CFLAGS" = ""; then
+ CFLAGS=""
+ fi
+ 
+-# Minimal LDFLAGS
+-LDFLAGS="$LDFLAGS -lX11"
++# Minimal LIBS
++LIBS="$LIBS -lX11"
+ 
+ # Is this really necessary?
+ AC_USE_SYSTEM_EXTENSIONS
+@@ -118,7 +118,7 @@ if test "x$TEST_XFT" != "x" ; then
+ 	if test -n "$freetype_config"; then
+ 	  freetype_cflags=`$freetype_config --cflags`
+ 	  freetype_libs=`$freetype_config --libs`
+-	  LDFLAGS="$LDFLAGS $freetype_libs"
++	  LIBS="$LIBS $freetype_libs"
+ 	  CPPFLAGS="$freetype_cflags $CPPFLAGS"
+ 	fi
+ 	AC_CHECK_HEADER(freetype/config/ftheader.h,,AC_MSG_ERROR("ftheader.h not found"))
+@@ -129,7 +129,7 @@ if test "x$TEST_XFT" != "x" ; then
+ 	if test -n "$xft_config"; then
+ 	  xft_cflags=`$xft_config --cflags`
+ 	  xft_libs=`$xft_config --libs`
+-	  LDFLAGS="$LDFLAGS $xft_libs"
++	  LIBS="$LIBS $xft_libs"
+ 	  CPPFLAGS="$xft_cflags $CPPFLAGS"
+ 	  CXXFLAGS="${CXXFLAGS} -DHAVE_XFT_H"
+ 	else
+@@ -139,7 +139,7 @@ if test "x$TEST_XFT" != "x" ; then
+ 		if test -n "$pkg_config"; then
+ 		  xft_cflags=`$pkg_config --cflags xft`
+ 		  xft_libs=`$pkg_config --libs xft`
+-		  LDFLAGS="$LDFLAGS $xft_libs"
++		  LIBS="$LIBS $xft_libs"
+ 		  CPPFLAGS="$xft_cflags $CPPFLAGS"
+ 		  CXXFLAGS="${CXXFLAGS} -DHAVE_XFT_H"
+ 		fi
+@@ -220,12 +220,12 @@ AC_OUTPUT(Makefile intl/Makefile m4/Make
+ 		  icons/tango-theme/Makefile icons/kde-theme/Makefile)
+ 
+ 
+-# Display CXXFLAGS, CFLAGS and LDFLAGS
++# Display CXXFLAGS, CFLAGS and LIBS
+ echo ""
+ echo "======================== Compiler and linker flags ========================"
+ echo "CXXFLAGS=$CXXFLAGS"
+ echo "CFLAGS=$CFLAGS"
+-echo "LDFLAGS=$LDFLAGS"
++echo "LIBS=$LIBS"
+ echo "==========================================================================="
+ 
+ 
