@@ -1,0 +1,214 @@
+--- origsrc/xfe-1.35/src/FilePanel.cpp	2013-08-21 06:32:33.000000000 -0500
++++ src/xfe-1.35/src/FilePanel.cpp	2013-09-24 00:50:44.487577100 -0500
+@@ -4450,104 +4450,7 @@ long FilePanel::onUpdToggleThumbnails(FX
+ }
+ 
+ 
+-#if defined(linux)
+-// Mount/Unmount file systems
+-long FilePanel::onCmdMount(FXObject*,FXSelector sel,void*)
+-{
+-	int ret;
+-    FXString cmd, msg, text;
+-	unsigned int op;
+-	File *f;
+-	FXString dir;
+-	
+-	current->list->setFocus();
+-
+-	// Use the selected directory in FilePanel if any
+-	// or use the selected directory in DirPanel
+-	if (current->list->getNumSelectedItems()==0)
+-		dir=current->list->getDirectory();
+-	else
+-	{
+-		for (int u=0; u<current->list->getNumItems(); u++)
+-		{
+-			if (current->list->isItemSelected(u))
+-				dir=current->list->getItemPathname(u);
+-		}
+-	}		
+-
+-	// If symbolic link, read the linked directory
+-	if (::isLink(dir))
+-		dir=::readLink(dir);
+-
+-    if(FXSELID(sel)==ID_MOUNT)
+-    {
+-        op=MOUNT;
+-		msg=_("Mount");
+-        cmd="mount ";
+-    }
+-    else
+-    {
+-        op=UNMOUNT;
+-		msg=_("Unmount");
+-        cmd="umount ";
+-    }
+-    cmd+=::quote(dir);
+-    cmd+=" 2>&1";
+-    ret=chdir(ROOTDIR);
+-	if (ret < 0)
+-	{
+-		int errcode=errno;	
+-		if (errcode)
+-			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s: %s"),ROOTDIR,strerror(errcode));
+-		else
+-			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s"),ROOTDIR);
+-		
+-		return 0;
+-	}
+-
+-	// Wait cursor
+-	getApp()->beginWaitCursor();
+-
+-	// File object
+-	text=msg + _(" file system...");
+-	f=new File(this,text.text(),op);
+-	f->create();
+-				   
+-	// Mount/unmount file system
+-	text=msg + _(" the folder:");
+-	f->mount(dir,text,cmd,op);
+-	ret=chdir(startlocation.text());
+- 	if (ret < 0)
+-	{
+-		int errcode=errno;	
+-		if (errcode)
+-			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s: %s"),startlocation.text(),strerror(errcode));
+-		else
+-			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s"),startlocation.text());
+-		
+-		return 0;
+-	}
+- 
+-	// If action is cancelled in progress dialog
+-	if (f->isCancelled())
+-	{
+-		f->hide();
+-		text=msg + _(" operation cancelled!");
+-		MessageBox::error(this,BOX_OK,_("Error"),text.text());
+-		delete f;
+-		return 0;
+-	}
+-					
+-	getApp()->endWaitCursor();
+-	delete f; 
+-
+-	// Force panel refresh
+-    onCmdRefresh(0,0,0);
+-
+-    return 1;
+-}
+-
+-
++#if defined(unix)
+ // Run script
+ long FilePanel::onCmdRunScript(FXObject* o, FXSelector sel, void*)
+ {
+@@ -4648,6 +4551,105 @@ long FilePanel::onCmdGoScriptDir(FXObjec
+ 	
+ 	return 1;
+ }
++#endif // unix
++
++
++#if defined(linux)
++// Mount/Unmount file systems
++long FilePanel::onCmdMount(FXObject*,FXSelector sel,void*)
++{
++	int ret;
++    FXString cmd, msg, text;
++	unsigned int op;
++	File *f;
++	FXString dir;
++	
++	current->list->setFocus();
++
++	// Use the selected directory in FilePanel if any
++	// or use the selected directory in DirPanel
++	if (current->list->getNumSelectedItems()==0)
++		dir=current->list->getDirectory();
++	else
++	{
++		for (int u=0; u<current->list->getNumItems(); u++)
++		{
++			if (current->list->isItemSelected(u))
++				dir=current->list->getItemPathname(u);
++		}
++	}		
++
++	// If symbolic link, read the linked directory
++	if (::isLink(dir))
++		dir=::readLink(dir);
++
++    if(FXSELID(sel)==ID_MOUNT)
++    {
++        op=MOUNT;
++		msg=_("Mount");
++        cmd="mount ";
++    }
++    else
++    {
++        op=UNMOUNT;
++		msg=_("Unmount");
++        cmd="umount ";
++    }
++    cmd+=::quote(dir);
++    cmd+=" 2>&1";
++    ret=chdir(ROOTDIR);
++	if (ret < 0)
++	{
++		int errcode=errno;	
++		if (errcode)
++			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s: %s"),ROOTDIR,strerror(errcode));
++		else
++			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s"),ROOTDIR);
++		
++		return 0;
++	}
++
++	// Wait cursor
++	getApp()->beginWaitCursor();
++
++	// File object
++	text=msg + _(" file system...");
++	f=new File(this,text.text(),op);
++	f->create();
++				   
++	// Mount/unmount file system
++	text=msg + _(" the folder:");
++	f->mount(dir,text,cmd,op);
++	ret=chdir(startlocation.text());
++ 	if (ret < 0)
++	{
++		int errcode=errno;	
++		if (errcode)
++			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s: %s"),startlocation.text(),strerror(errcode));
++		else
++			MessageBox::error(this,BOX_OK,_("Error"),_("Can't enter folder %s"),startlocation.text());
++		
++		return 0;
++	}
++ 
++	// If action is cancelled in progress dialog
++	if (f->isCancelled())
++	{
++		f->hide();
++		text=msg + _(" operation cancelled!");
++		MessageBox::error(this,BOX_OK,_("Error"),text.text());
++		delete f;
++		return 0;
++	}
++					
++	getApp()->endWaitCursor();
++	delete f; 
++
++	// Force panel refresh
++    onCmdRefresh(0,0,0);
++
++    return 1;
++}
+ 
+ 
+ // Update the Mount button

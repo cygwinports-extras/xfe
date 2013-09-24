@@ -2,21 +2,21 @@ FOX_VERSION=1.6
 inherit fox
 
 NAME="xfe"
-VERSION=1.34
+VERSION=1.35
 RELEASE=1
-CATEGORY="Utils X11 Graphics"
+CATEGORY="Utils Graphics"
 SUMMARY="X File Explorer suite for FOX Toolkit"
 DESCRIPTION="X File Explorer is an MS-Explorer like file manager, built on the
 FOX Toolkit. It is based on the popular, but discontinued, X Win Commander.
 Also included are: xfi (image viewer), xfq (RPM manager), xfv (text viewer),
 and xfw (text editor)."
 HOMEPAGE="http://roland65.free.fr/xfe/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xfe/xfe-${VERSION}.tar.gz"
 PATCH_URI="
 	1.19.1-vpath.patch
 	1.32.2-ioctl-cygwin.patch
 	1.32.1-misc-build.patch
-	1.34-dirlist-cygwin.patch
+	1.35-filepanel-cygwin.patch
 "
 
 DIFF_EXCLUDES="Makefile xferc"
